@@ -9,10 +9,16 @@ Steps:
 1.	Open the hosts file with root privileges:
 2.	sudo nano /etc/hosts
 3.	Added the Domain Name
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/a4dc82b9-2531-4970-81da-f74b69cfc285" />
+
  
 
-🗄️ Database Configuration (MySQL – DVWA Setup)
+🗄️ Database Configuration (MySQL – DVWA Setup):
 To provide a realistic vulnerable web application for testing the WAF, I installed and configured DVWA (Damn Vulnerable Web Application) on the Ubuntu web server.
+
+<img width="940" height="492" alt="image" src="https://github.com/user-attachments/assets/7a81f6dc-0d0d-46e5-8662-6f3798300248" />
+
 
 Steps:
 1.	Install MySQL Server (if not already installed):
@@ -38,8 +44,10 @@ o	$_DVWA[ 'db_database' ] = 'dvwa';
 
 
 
-⚙️ Apache Web Server Configuration
+⚙️ Apache Web Server Configuration :
 To serve the DVWA web application directly on the Ubuntu host and integrate it with the SafeLine WAF, I modified the default Apache2 configuration.
+
+<img width="940" height="494" alt="image" src="https://github.com/user-attachments/assets/8ee5daba-f9ec-45bf-9ec1-6a91271e0b8a" />
 
 Steps:
 1.	Open the default Apache configuration file:
@@ -53,12 +61,21 @@ DocumentRoot /var/www/html/dvwa
 </Directory>
 4.	Restart Apache to apply changes:
 5.	sudo systemctl restart apache2
+
+<img width="940" height="492" alt="image" src="https://github.com/user-attachments/assets/0b99a2a1-26d8-47c2-8d40-e7d8edc037da" />
+
  
 •	DVWA is now accessible directly on the local host via:
 •	http://webserver.demo
 
 🛡️ SafeLine WAF Installation
 After setting up the web application and database, I installed SafeLine Web Application Firewall (WAF) on the Ubuntu server to protect DVWA from web-based attacks.
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/11208967-3ffc-4b8e-aa78-e837fe3f75df" />
+
+<img width="940" height="490" alt="image" src="https://github.com/user-attachments/assets/76f18578-0bff-48e7-94bf-b77605781841" />
+
+
  
 Steps:
 1.	Download SafeLine WAF
@@ -79,7 +96,7 @@ o	Verify that the WAF is active and monitoring incoming requests.
 o	Add DVWA as a protected application in SafeLine WAF.
 o	Assign rules for SQL Injection prevention, HTTP Flood protection, and authentication checks.
 
-🔒 SSL/TLS Configuration via SafeLine WAF
+🔒 SSL/TLS Configuration via SafeLine WAF :
 To secure the DVWA application and ensure encrypted traffic passes through the WAF, I configured SSL/TLS settings directly in SafeLine WAF.
 Steps:
 1.	Access WAF Dashboard
@@ -88,6 +105,9 @@ o	Open the SafeLine WAF admin panel in a browser:
 o	Go to the “Certificates” or “SSL Settings” section in the WAF dashboard.
 3.	Create/Upload Certificate
 o	Upload the existing certificate and private key created for DVWA.
+
+<img width="940" height="495" alt="image" src="https://github.com/user-attachments/assets/cb1d9ad3-b88e-426a-9c01-14ff3cee1e24" />
+
  
 
 4.	Assign Certificate to DVWA Application
