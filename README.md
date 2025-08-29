@@ -1,9 +1,9 @@
-📖 Introduction
+📖 Introduction :
 The SafeLine Web Application Firewall (WAF) Project was developed as part of my cybersecurity home lab to strengthen my practical skills in network security and application defense mechanisms. The primary objective of this project was to simulate a real-world environment where web applications are exposed to common threats such as SQL Injection, HTTP Flood attacks, and unauthorized access attempts.
 By deploying SafeLine WAF on an Ubuntu server and integrating it with an Apache web application, I was able to configure security rules, generate SSL certificates, and test the system against simulated attacks launched from a Kali Linux machine. The project provided valuable hands-on experience in configuring WAF policies, managing web traffic, and validating security protections, which are essential skills for roles in SOC operations, network security, and cybersecurity engineering.
 This project not only demonstrates my ability to deploy and secure applications but also reflects my interest in building a strong foundation in offensive and defensive security practices.
 
-🌐 DNS & Host Configuration
+🌐 DNS & Host Configuration :
 To simulate a real-world environment with domain-based access, I configured the DNS resolution locally within the Ubuntu server using the /etc/hosts file. This allowed the web application and WAF to be accessed via custom domain names rather than IP addresses.
 Steps:
 1.	Open the hosts file with root privileges:
